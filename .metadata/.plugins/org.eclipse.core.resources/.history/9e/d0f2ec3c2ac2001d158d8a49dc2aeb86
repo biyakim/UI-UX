@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>로컬스토리지 테스트</title>
+	</head>
+	<body>
+		<script>
+			function clickCounter(){
+				if(typeof(Storage))
+				if(localStorage.clickcount){
+					localStorage.clickcount = Number(localStorage.clickcount)+1;
+				}else{
+					localStorage.clickcount = 1;
+				}
+				document.getElementById("result").innerHTML = `버튼을 ${localStrage.clickcount}번 눌렀습니다.`;
+			}
+		</script>
+		<p> <button onclick="clickCounter()" type="button">횟수증가</button></p>
+		<div id="result"></div>
+		
+	</body>
+</html>
